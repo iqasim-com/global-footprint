@@ -139,12 +139,12 @@
             bottom: 80px;
             padding: 20px 40px;
             font-size: 24px;
-            background: #070707;
-            color: white;
+            background: #07070700;
+            color: rgba(255, 255, 255, 0.2);
             border-radius: 12px;
             cursor: pointer;
             z-index: 10000;
-            border: 1px solid #e91e63;
+            border: 2px dashed #e91e6333;
             transition: all 0.3s ease-in-out;
             cursor: pointer;
             font-family: monospace;
@@ -153,6 +153,7 @@
         .btn-exp:hover {
             background: #e91e6329;
             box-shadow: 2px 12px 217px #e51d66;
+            color: rgb(255, 255, 255);
         }
 
         #locationList li:hover {
@@ -298,7 +299,7 @@
         let barHeight;
         let x = 0;
         for (let i = 0; i < bufferLength; i++) {
-            barHeight = dataArray[i] * 5;
+            barHeight = dataArray[i] * 3;
             ctx.fillStyle = `rgb(${barHeight + 100}, 20, 150)`;
             ctx.fillRect(x, canvas.height - barHeight, barWidth, barHeight);
             x += barWidth + 1;
